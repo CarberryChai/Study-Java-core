@@ -1,6 +1,7 @@
 package com.company;
 
 public class Manager extends Employee{
+    public static int num = 1;
     private double bonus;
 
     public Manager(String name, Double salary, int year, int month, int day) {
