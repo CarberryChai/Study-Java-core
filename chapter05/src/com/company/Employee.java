@@ -2,7 +2,7 @@ package com.company;
 
 import java.time.LocalDate;
 
-public class Employee implements Comparable {
+public class Employee implements Comparable<Employee> {
   private String name;
   private Double salary;
   private LocalDate hireDay;
@@ -31,8 +31,7 @@ public class Employee implements Comparable {
   }
 
   @Override
-  public int compareTo(Object o) {
-    Employee other = (Employee) o;
-    return Double.compare(this.salary, other.salary);
+  public int compareTo(Employee e) {
+    return Double.compare(this.salary, e.salary);
   }
 }
