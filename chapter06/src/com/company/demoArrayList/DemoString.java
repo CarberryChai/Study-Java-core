@@ -2,10 +2,12 @@ package com.company.demoArrayList;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
 public class DemoString {
   public static void main(String[] args) {
-    ArrayList<Integer> arrayList = new ArrayList<>();
+    List<Integer> arrayList = new ArrayList<>();
     arrayList.add(-1);
     arrayList.add(3);
     arrayList.add(3);
@@ -16,7 +18,12 @@ public class DemoString {
     arrayList.add(-7);
     System.out.println(arrayList);
     Collections.reverse(arrayList);
-    System.out.println(arrayList);
+    // System.out.println(arrayList);
+    Iterator<Integer> iterator = arrayList.iterator();
+    // 迭代器迭代
+    while (iterator.hasNext()){
+      System.out.println(iterator.next());
+    }
     System.out.println(Collections.max(arrayList));
   }
 }
