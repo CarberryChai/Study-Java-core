@@ -34,4 +34,9 @@ public class Employee implements Comparable<Employee> {
   public int compareTo(Employee e) {
     return Double.compare(this.salary, e.salary);
   }
+
+  @Override
+  public String toString() {
+    return this.getName() + ", His salary is " + this.getSalary();
+  }
 }

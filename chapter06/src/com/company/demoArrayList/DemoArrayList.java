@@ -19,9 +19,14 @@ public class DemoArrayList {
         });
     System.out.println(filterList.size());
     System.out.println(filterList);
+    System.out.println(getMax(4, 8));
+    System.out.println(true && false || true && true);
   }
   // 判断一个整数是偶数
   public static boolean isOdd(int num) {
     return num % 2 == 0;
+  }
+  public static int getMax(int x, int y){
+    return Math.max(x, y);
   }
 }

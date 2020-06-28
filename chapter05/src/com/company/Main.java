@@ -2,13 +2,7 @@ package com.company;
 
 import java.util.*;
 
-@FunctionalInterface
-interface IntCall {
-  int call(int arg);
-}
-
 public class Main {
-  static IntCall foo;
 
   public static void main(String[] args) {
     Employee[] employees = new Employee[3];
@@ -19,12 +13,8 @@ public class Main {
     employees[2] = new Employee("Candy", 3500.0, 2019, 1, 20);
     Arrays.sort(employees);
     for (Employee e : employees) {
-      System.out.println(e.getName() + ", His salary is " + e.getSalary());
+      System.out.println(e);
     }
-    System.out.println(sum(1, 2, 3, 4));
-    // n的阶乘
-    foo = n -> n == 0 ? 1 : n * foo.call(n - 1);
-    System.out.println(foo.call(4));
   }
 
   public static int sum(int... nums) {
