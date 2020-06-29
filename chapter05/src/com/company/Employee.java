@@ -2,19 +2,19 @@ package com.company;
 
 import java.time.LocalDate;
 
-public class Employee implements Comparable<Employee> {
-  private String name;
+public class Employee extends Person implements Comparable<Employee> {
   private Double salary;
   private LocalDate hireDay;
 
   public Employee(String name, Double salary, int year, int month, int day) {
-    this.name = name;
+    super(name);
     this.salary = salary;
     this.hireDay = LocalDate.of(year, month, day);
   }
 
-  public String getName() {
-    return name;
+  @Override
+  public String getDescription() {
+    return String.format("%s get the salary of %.2f", super.getName(), getSalary());
   }
 
   public Double getSalary() {
