@@ -1,4 +1,4 @@
-package com.company;
+package com.company.chapter04;
 
 import java.time.LocalDate;
 import java.time.DayOfWeek;
