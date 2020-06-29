@@ -14,7 +14,7 @@ public class Employee extends Person implements Comparable<Employee> {
 
   @Override
   public String getDescription() {
-    return String.format("%s get the salary of %.2f", super.getName(), getSalary());
+    return String.format("%s get the salary of %.2f", getName(), getSalary());
   }
 
   public Double getSalary() {
@@ -37,6 +37,6 @@ public class Employee extends Person implements Comparable<Employee> {
 
   @Override
   public String toString() {
-    return this.getName() + ", His salary is " + this.getSalary();
+    return getClass().getName() + this.getName() + ", His salary is " + this.getSalary();
   }
 }
