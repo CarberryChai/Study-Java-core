@@ -13,20 +13,18 @@ public class DemoArrayList {
       int num = random.nextInt(100) + 1; // [1, 100]内的随机数
       list.add(num);
     }
+    System.out.println(list);
     list.forEach(
         n -> {
           if (isOdd(n)) filterList.add(n);
         });
     System.out.println(filterList.size());
     System.out.println(filterList);
-    System.out.println(getMax(4, 8));
-    System.out.println(true && false || true && true);
+    list.removeIf(DemoArrayList::isOdd);
+    System.out.println(list);
   }
   // 判断一个整数是偶数
   public static boolean isOdd(int num) {
     return num % 2 == 0;
-  }
-  public static int getMax(int x, int y){
-    return Math.max(x, y);
   }
 }
